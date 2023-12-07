@@ -26,3 +26,18 @@ function deepCount(a) {
 }
 
 // or
+
+function deepCount(arr) {
+  const stack = [...arr]
+  let size = 0
+
+  while (stack.length) {
+    const next = stack.pop()
+    size += 1
+
+    if (Array.isArray(next)) {
+      stack.push(...next)
+    }
+  }
+  return size
+}
