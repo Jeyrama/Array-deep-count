@@ -24,3 +24,5 @@ function deepCount(a) {
   }
   return count;
 }
+
+// or
